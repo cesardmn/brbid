@@ -1,0 +1,29 @@
+{
+  "name": "brbid_xl_helper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cesardmn/brbid.git",
+  "author": "Cesar <cesardmn@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "^4.11.2",
+    "clsx": "latest",
+    "next": "latest",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "xlsx": "^0.16.9"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  }
+}
