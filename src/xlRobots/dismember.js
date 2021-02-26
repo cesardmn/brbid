@@ -1,4 +1,4 @@
-function dismember(items) {
+export function dismember(items) {
   /*
     input: list
     output: list
