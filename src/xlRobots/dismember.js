@@ -1,8 +1,8 @@
-export function dismember(items) {
+export default function dismember(items) {
   /*
     input: list
     output: list
-    todo: dinamic unique col, validations (types)
+    todos: [dynamic unique param, validations (types)]
   */
 
   const uniques = __getUniques(items)
