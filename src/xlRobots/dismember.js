@@ -5,9 +5,14 @@ export default function dismember(items, colName) {
     todos: [validations, types]
   */
 
-  const uniques = __getUniques(items, colName)
-  const dismemberedMultiple = __getDismemberMultiples(items, colName)
-  return [...uniques, ...dismemberedMultiple]
+ 
+ try {
+    const uniques = __getUniques(items, colName)
+    const dismemberedMultiple = __getDismemberMultiples(items, colName)
+    return [...uniques, ...dismemberedMultiple]
+  } catch (err) {
+    return []
+  }
 }
 
 function __getUniques(items, colName) {
