@@ -9,12 +9,7 @@ import Container from '@material-ui/core/Container'
 import Fab from '@material-ui/core/Fab'
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp'
 import Zoom from '@material-ui/core/Zoom'
-import Button from '@material-ui/core/Button'
-import HomeIcon from '@material-ui/icons/Home'
-import IconButton from '@material-ui/core/IconButton'
-
-import Head from 'next/head'
-import Link from 'next/link'
+import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,9 +32,6 @@ const useStyles = makeStyles((theme) => ({
 function ScrollTop(props) {
   const { children, window } = props
   const classes = useStyles()
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
     disableHysteresis: true,
@@ -67,20 +59,13 @@ function ScrollTop(props) {
 
 ScrollTop.propTypes = {
   children: PropTypes.element.isRequired,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 }
 
-export default function PageDefault({ children, title }) {
+export default function PageDefault({ children }) {
   const classes = useStyles()
   return (
     <>
-      <Head>
-        <title>{title}</title>
-      </Head>
       <AppBar color="default">
         <Toolbar className={classes.toolBar}>
           <img
@@ -88,20 +73,14 @@ export default function PageDefault({ children, title }) {
             alt="brbid.com"
             style={{ height: '1.5rem' }}
           />
+          <Typography variant="subtitle1">XL Helper</Typography>
 
-          <Link href="/desmembrar">
-            <a className={classes.link}>
-              <Button>desmembrar</Button>
-            </a>
-          </Link>
-
-          <Link href="/">
-            <a className={classes.link}>
-              <IconButton>
-                <HomeIcon />
-              </IconButton>
-            </a>
-          </Link>
+          <img
+            width="20"
+            height="20  "
+            src="https://www.flaticon.com/svg/vstatic/svg/732/732220.svg?token=exp=1614597155~hmac=f2a433ab21277dbda023e2cb57870d7a"
+            alt="excel ícone"
+          />
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
