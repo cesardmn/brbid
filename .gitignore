@@ -71,6 +71,7 @@ typings/
 # dotenv environment variables file
 .env
 .env.test
+.env.local
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -107,3 +108,5 @@ teste.js
 teste.py
 Testes.xlsx
 desmembrado.xlsx
+
+gSheetsApi.json
